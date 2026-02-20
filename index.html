@@ -1,35 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Chaudhary Tiles & Stone | Premium Marble in Gurugram</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<title>Chaudhary Tiles & Stone | Gurugram</title>
 
 <style>
 :root{
---bg:#f4f6f9;
+--bg:#f5f5f5;
 --text:#222;
---card:#ffffff;
+--card:#fff;
 --primary:#00c3ff;
 }
 
 body.dark{
 --bg:#121212;
---text:#ffffff;
+--text:#fff;
 --card:#1e1e1e;
 }
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-scroll-behavior:smooth;
-}
-
 body{
+margin:0;
+font-family:Arial, sans-serif;
 background:var(--bg);
 color:var(--text);
 transition:0.3s;
@@ -37,154 +29,116 @@ transition:0.3s;
 
 /* Header */
 header{
-background:linear-gradient(135deg,#111,#333);
+background:#111;
 color:white;
-padding:25px;
+padding:20px;
 text-align:center;
-animation:fadeDown 1s ease-in-out;
+position:relative;
 }
 
-.toggle-btn{
+.toggle{
 position:absolute;
 right:20px;
-top:25px;
-cursor:pointer;
+top:20px;
 background:var(--primary);
-padding:8px 14px;
-border-radius:20px;
-color:white;
 border:none;
-}
-
-/* Navbar */
-nav{
-background:#000;
-text-align:center;
-padding:12px;
-}
-
-nav a{
+padding:8px 15px;
+border-radius:20px;
+cursor:pointer;
 color:white;
-text-decoration:none;
-margin:0 20px;
-font-weight:500;
-transition:0.3s;
-}
-
-nav a:hover{
-color:var(--primary);
 }
 
 /* Hero */
 .hero{
-background:url('https://images.unsplash.com/photo-1582582494700-f8ce0b6e1a5c?auto=format&fit=crop&w=1400&q=80');
+background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+url('https://images.unsplash.com/photo-1582582494700-f8ce0b6e1a5c?auto=format&fit=crop&w=1400&q=80');
 background-size:cover;
 background-position:center;
-height:450px;
+height:300px;
 display:flex;
 align-items:center;
 justify-content:center;
 color:white;
 text-align:center;
-position:relative;
-}
-
-.hero::after{
-content:'';
-position:absolute;
-top:0;left:0;
-width:100%;height:100%;
-background:rgba(0,0,0,0.6);
-}
-
-.hero h2{
-position:relative;
-font-size:36px;
-animation:fadeUp 1.5s ease-in-out;
 }
 
 /* Section */
 .section{
-padding:60px 20px;
+padding:40px 20px;
 text-align:center;
 }
 
-/* Products */
-.products{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:25px;
+/* Filter Buttons */
+.filter-btn{
+margin:5px;
+padding:8px 15px;
+border:none;
+cursor:pointer;
+background:var(--primary);
+color:white;
+border-radius:5px;
 }
 
-.card{
+/* Table */
+table{
+width:95%;
+margin:auto;
+border-collapse:collapse;
 background:var(--card);
-width:280px;
-padding:15px;
-border-radius:15px;
-box-shadow:0 8px 20px rgba(0,0,0,0.1);
-transition:0.4s;
-animation:fadeUp 1.5s ease-in-out;
-}
-
-.card:hover{
-transform:translateY(-10px);
-}
-
-.card img{
-width:100%;
-border-radius:12px;
-}
-
-.price{
-color:green;
-font-weight:bold;
-margin-top:5px;
-}
-
-/* Reviews */
-.review-box{
-background:var(--card);
-padding:20px;
-margin:15px auto;
-max-width:600px;
-border-radius:12px;
 box-shadow:0 5px 15px rgba(0,0,0,0.1);
 }
 
-/* Contact */
-form{
-max-width:400px;
-margin:auto;
-display:flex;
-flex-direction:column;
-gap:15px;
+th, td{
+padding:12px;
+border:1px solid #ddd;
 }
 
-input, textarea{
-padding:12px;
-border-radius:8px;
+th{
+background:var(--primary);
+color:white;
+}
+
+tr:hover{
+background:#f1f1f1;
+}
+
+/* Calculator */
+.calc-box{
+background:var(--card);
+padding:20px;
+margin:20px auto;
+max-width:400px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+input, select{
+width:100%;
+padding:10px;
+margin:8px 0;
+border-radius:5px;
 border:1px solid #ccc;
 }
 
-button{
-padding:12px;
-border:none;
-background:var(--primary);
-color:white;
-font-size:16px;
+/* Reviews */
+.review{
+background:var(--card);
+padding:15px;
+margin:10px auto;
+max-width:500px;
 border-radius:8px;
-cursor:pointer;
+box-shadow:0 3px 10px rgba(0,0,0,0.1);
 }
 
+/* Map */
 iframe{
-width:100%;
-height:350px;
-border-radius:12px;
+width:95%;
+height:300px;
 margin-top:20px;
+border-radius:10px;
 }
 
-/* Floating WhatsApp */
+/* WhatsApp */
 .whatsapp{
 position:fixed;
 bottom:20px;
@@ -193,8 +147,8 @@ background:#25D366;
 color:white;
 padding:15px;
 border-radius:50%;
-font-size:22px;
 text-decoration:none;
+font-size:20px;
 box-shadow:0 5px 15px rgba(0,0,0,0.3);
 }
 
@@ -203,25 +157,13 @@ footer{
 background:#111;
 color:white;
 text-align:center;
-padding:20px;
-margin-top:40px;
-}
-
-/* Animations */
-@keyframes fadeUp{
-from{opacity:0;transform:translateY(40px);}
-to{opacity:1;transform:translateY(0);}
-}
-
-@keyframes fadeDown{
-from{opacity:0;transform:translateY(-40px);}
-to{opacity:1;transform:translateY(0);}
+padding:15px;
+margin-top:30px;
 }
 
 @media(max-width:768px){
-.products{
-flex-direction:column;
-align-items:center;
+table{
+font-size:14px;
 }
 }
 </style>
@@ -231,83 +173,113 @@ align-items:center;
 
 <header>
 <h1>Chaudhary Tiles & Stone</h1>
-<p>Premium Tiles & Natural Stones in Gurugram</p>
-<button class="toggle-btn" onclick="toggleMode()">🌙 Mode</button>
+<p>Premium Tiles & Stone Services in Gurugram</p>
+<button class="toggle" onclick="toggleMode()">🌙 Mode</button>
 </header>
 
-<nav>
-<a href="#">Home</a>
-<a href="#products">Products</a>
-<a href="#reviews">Reviews</a>
-<a href="#contact">Contact</a>
-</nav>
-
 <div class="hero">
-<h2>Luxury Marble Collection at Best Prices</h2>
+<h2>Professional Tile & Stone Labour Services</h2>
 </div>
 
-<!-- Products -->
-<div class="section" id="products">
-<h2>Our Products</h2>
-<br>
+<div class="section">
 
-<div class="products">
-<div class="card">
-<img src="https://images.unsplash.com/photo-1618220179428-22790b461013?auto=format&fit=crop&w=800&q=80">
-<h3>Italian Marble</h3>
-<p class="price">₹250 / sq.ft</p>
+<h2>Price List (Labour Only)</h2>
+
+<button class="filter-btn" onclick="filter('all')">All</button>
+<button class="filter-btn" onclick="filter('tiles')">Tiles</button>
+<button class="filter-btn" onclick="filter('stone')">Stone</button>
+<button class="filter-btn" onclick="filter('service')">Services</button>
+<button class="filter-btn" onclick="filter('labour')">Labour</button>
+
+<br><br>
+
+<table>
+<tr>
+<th>Service</th>
+<th>Category</th>
+<th>Price</th>
+</tr>
+
+<tr class="tiles">
+<td>Tile Fitting</td>
+<td>Tiles</td>
+<td>₹45 / sq.ft</td>
+</tr>
+
+<tr class="stone">
+<td>Kitchen Stone Fitting</td>
+<td>Stone</td>
+<td>₹200 / sq.ft</td>
+</tr>
+
+<tr class="stone">
+<td>Window Stone Fitting</td>
+<td>Stone</td>
+<td>₹250 / sq.ft</td>
+</tr>
+
+<tr class="service">
+<td>Water Proofing</td>
+<td>Service</td>
+<td>₹80 / sq.ft</td>
+</tr>
+
+<tr class="service">
+<td>Epoxy Filling</td>
+<td>Service</td>
+<td>₹20 / sq.ft</td>
+</tr>
+
+<tr class="labour">
+<td>Bathroom Plumbing (1 Bathroom)</td>
+<td>Labour</td>
+<td>₹15,000</td>
+</tr>
+
+</table>
+
 </div>
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80">
-<h3>Makrana Marble</h3>
-<p class="price">₹180 / sq.ft</p>
-</div>
+<!-- Calculator -->
+<div class="section">
+<h2>Cost Calculator</h2>
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1598300054513-8c02b77e1b68?auto=format&fit=crop&w=800&q=80">
-<h3>Granite Stone</h3>
-<p class="price">₹150 / sq.ft</p>
-</div>
+<div class="calc-box">
+<select id="service">
+<option value="45">Tile Fitting (₹45)</option>
+<option value="200">Kitchen Stone (₹200)</option>
+<option value="250">Window Stone (₹250)</option>
+<option value="80">Water Proofing (₹80)</option>
+<option value="20">Epoxy (₹20)</option>
+</select>
+
+<input type="number" id="area" placeholder="Enter Area (sq.ft)">
+<button onclick="calculate()">Calculate</button>
+
+<h3 id="result"></h3>
 </div>
 </div>
 
 <!-- Reviews -->
-<div class="section" id="reviews">
+<div class="section">
 <h2>Customer Reviews ⭐</h2>
 
-<div class="review-box">
-<p>"Best quality tiles and marble in Gurugram. Highly recommended!"</p>
+<div class="review">
+<p>"Best tile fitting service in Gurugram. Very professional work."</p>
 <b>- Rahul Sharma</b>
 </div>
 
-<div class="review-box">
-<p>"Affordable price and fast delivery."</p>
+<div class="review">
+<p>"Affordable rates and quality finishing."</p>
 <b>- Amit Verma</b>
 </div>
 
-<div class="review-box">
-<p>"Very professional and trusted supplier."</p>
-<b>- Sandeep Kumar</b>
 </div>
 
-</div>
-
-<!-- Contact -->
-<div class="section" id="contact">
-<h2>Contact Us</h2>
-<p>📞 7827692023</p>
-<p>📍 Gurugram, Haryana</p>
-
-<form onsubmit="sendToWhatsApp(event)">
-<input type="text" id="name" placeholder="Your Name" required>
-<input type="tel" id="phone" placeholder="Your Phone" required>
-<textarea id="message" placeholder="Your Requirement" required></textarea>
-<button type="submit">Send Enquiry</button>
-</form>
-
+<!-- Map -->
+<div class="section">
+<h2>Our Location</h2>
 <iframe src="https://www.google.com/maps?q=Gurugram,Haryana&output=embed"></iframe>
-
 </div>
 
 <footer>
@@ -317,19 +289,22 @@ align-items:center;
 <a href="https://wa.me/917827692023" class="whatsapp" target="_blank">💬</a>
 
 <script>
-function sendToWhatsApp(event){
-event.preventDefault();
-var name=document.getElementById("name").value;
-var phone=document.getElementById("phone").value;
-var message=document.getElementById("message").value;
+function filter(category){
+var rows=document.querySelectorAll("table tr");
+rows.forEach(function(row){
+if(row.classList.contains(category) || category==="all" || row.rowIndex===0){
+row.style.display="";
+}else{
+row.style.display="none";
+}
+});
+}
 
-var url="https://wa.me/917827692023?text="
-+"New Enquiry:%0a"
-+"Name: "+name+"%0a"
-+"Phone: "+phone+"%0a"
-+"Requirement: "+message;
-
-window.open(url,"_blank");
+function calculate(){
+var rate=document.getElementById("service").value;
+var area=document.getElementById("area").value;
+var total=rate*area;
+document.getElementById("result").innerText="Total Cost: ₹"+total;
 }
 
 function toggleMode(){
