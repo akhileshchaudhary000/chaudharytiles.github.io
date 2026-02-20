@@ -1,9 +1,146 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Chaudhary Tiles</title>
+<title>Chaudhary Tiles & Stone | Gurugram</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial;}
+
+body{
+background:#f8f9fa;
+transition:0.4s;
+}
+
+.dark-mode{
+background:#121212;
+color:white;
+}
+
+nav{
+background:#000;
+color:white;
+padding:15px 30px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:sticky;
+top:0;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:20px;
+}
+
+.toggle-btn{
+background:#25D366;
+border:none;
+padding:8px 12px;
+border-radius:5px;
+cursor:pointer;
+}
+
+.hero{
+background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),
+url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c');
+background-size:cover;
+color:white;
+padding:120px 20px;
+text-align:center;
+}
+
+.section{padding:60px 20px;text-align:center;}
+
+.card{
+background:white;
+padding:20px;
+width:250px;
+margin:10px;
+display:inline-block;
+border-radius:10px;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+transition:0.3s;
+}
+
+.dark-mode .card{
+background:#1e1e1e;
+color:white;
+}
+
+.card:hover{transform:scale(1.05);}
+
+footer{
+background:#000;
+color:white;
+text-align:center;
+padding:20px;
+}
+
+.float-btn{
+position:fixed;
+right:20px;
+bottom:20px;
+background:#25D366;
+color:white;
+padding:15px;
+border-radius:50%;
+text-decoration:none;
+}
+
+.call-btn{
+position:fixed;
+left:20px;
+bottom:20px;
+background:#007bff;
+color:white;
+padding:15px;
+border-radius:50%;
+text-decoration:none;
+}
+</style>
 </head>
+
 <body>
-<h1>Website Working ✅</h1>
+
+<nav>
+<h2>Chaudhary Tiles & Stone</h2>
+<div>
+<a href="#">Home</a>
+<a href="#services">Services</a>
+<button class="toggle-btn" onclick="toggleMode()">🌙</button>
+</div>
+</nav>
+
+<div class="hero">
+<h1>Premium Tiles & Natural Stones in Gurugram</h1>
+<p>Best Quality | Best Price | Trusted Supplier</p>
+</div>
+
+<div class="section" id="services">
+<h2>Our Services</h2>
+<div class="card">Wall Tiles</div>
+<div class="card">Floor Tiles</div>
+<div class="card">Marble</div>
+<div class="card">Granite</div>
+<div class="card">Kota Stone</div>
+<div class="card">Sandstone</div>
+<div class="card">Designer Stone</div>
+</div>
+
+<footer>
+© 2026 Chaudhary Tiles & Stone | Gurugram
+</footer>
+
+<a class="float-btn" href="https://wa.me/917827692023">💬</a>
+<a class="call-btn" href="tel:7827692023">📞</a>
+
+<script>
+function toggleMode(){
+document.body.classList.toggle("dark-mode");
+}
+</script>
+
 </body>
 </html>
