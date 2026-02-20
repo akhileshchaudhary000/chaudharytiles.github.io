@@ -51,14 +51,22 @@ padding:120px 20px;
 text-align:center;
 }
 
-.section{padding:60px 20px;text-align:center;}
+.section{
+padding:70px 20px;
+text-align:center;
+}
+
+.services{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:20px;
+}
 
 .card{
 background:white;
 padding:20px;
 width:250px;
-margin:10px;
-display:inline-block;
 border-radius:10px;
 box-shadow:0 4px 10px rgba(0,0,0,0.1);
 transition:0.3s;
@@ -70,6 +78,37 @@ color:white;
 }
 
 .card:hover{transform:scale(1.05);}
+
+.price-box{
+background:white;
+padding:20px;
+width:280px;
+margin:15px auto;
+border-radius:10px;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+.dark-mode .price-box{
+background:#1e1e1e;
+}
+
+.faq{
+max-width:700px;
+margin:auto;
+text-align:left;
+}
+
+.faq-item{
+background:white;
+padding:15px;
+margin-bottom:15px;
+border-radius:8px;
+box-shadow:0 3px 10px rgba(0,0,0,0.1);
+}
+
+.dark-mode .faq-item{
+background:#1e1e1e;
+}
 
 footer{
 background:#000;
@@ -99,6 +138,10 @@ padding:15px;
 border-radius:50%;
 text-decoration:none;
 }
+
+@media(max-width:768px){
+.services{flex-direction:column;align-items:center;}
+}
 </style>
 </head>
 
@@ -109,6 +152,8 @@ text-decoration:none;
 <div>
 <a href="#">Home</a>
 <a href="#services">Services</a>
+<a href="#pricing">Pricing</a>
+<a href="#faq">FAQ</a>
 <button class="toggle-btn" onclick="toggleMode()">🌙</button>
 </div>
 </nav>
@@ -120,6 +165,7 @@ text-decoration:none;
 
 <div class="section" id="services">
 <h2>Our Services</h2>
+<div class="services">
 <div class="card">Wall Tiles</div>
 <div class="card">Floor Tiles</div>
 <div class="card">Marble</div>
@@ -127,6 +173,32 @@ text-decoration:none;
 <div class="card">Kota Stone</div>
 <div class="card">Sandstone</div>
 <div class="card">Designer Stone</div>
+</div>
+</div>
+
+<div class="section" id="pricing">
+<h2>Starting Price</h2>
+<div class="price-box">Tiles Starting From ₹25/sq.ft</div>
+<div class="price-box">Marble Starting From ₹60/sq.ft</div>
+<div class="price-box">Granite Starting From ₹70/sq.ft</div>
+</div>
+
+<div class="section" id="faq">
+<h2>Frequently Asked Questions</h2>
+<div class="faq">
+<div class="faq-item">
+<b>Do you provide home delivery?</b><br>
+Yes, delivery available in Gurugram.
+</div>
+<div class="faq-item">
+<b>Do you provide installation?</b><br>
+Yes, professional installation available.
+</div>
+<div class="faq-item">
+<b>How to get quotation?</b><br>
+Contact us on WhatsApp for quick quotation.
+</div>
+</div>
 </div>
 
 <footer>
