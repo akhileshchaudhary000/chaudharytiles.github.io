@@ -1,213 +1,301 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chaudhary Tiles & Stone | Professional Tile Contractor in Gurugram</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;
+    }
 
-<title>Chaudhary Tiles & Stone | Professional Tile Contractor in Gurugram</title>
+    body {
+      transition: background-color 0.5s, color 0.5s;
+    }
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    header {
+      background: black;
+      padding: 15px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+      width: 100%;
+      z-index: 1000;
+    }
 
-<style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;scroll-behavior:smooth;}
-body{background:#111;color:white;}
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 25px;
+      font-weight: 500;
+    }
 
-header{
-background:black;
-padding:15px 50px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-position:fixed;
-width:100%;
-z-index:1000;
-}
+    nav a:hover {
+      color: gold;
+    }
 
-nav a{
-color:white;
-text-decoration:none;
-margin-left:25px;
-font-weight:500;
-}
-nav a:hover{color:gold;}
+    .logo-area {
+      text-align: center;
+      padding-top: 120px;
+    }
 
-.logo-area{text-align:center;padding-top:120px;}
-.logo-area img{width:120px;}
-.company-name{font-size:32px;font-weight:700;margin-top:10px;}
-.badge{
-background:linear-gradient(45deg,gold,#ffcc00);
-color:black;
-padding:8px 18px;
-border-radius:30px;
-display:inline-block;
-margin-top:10px;
-font-weight:600;
-}
+    .logo-area img {
+      width: 250px;
+    }
 
-.hero{
-height:90vh;
-background:url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c') center/cover;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-padding:20px;
-}
-.hero h1{font-size:45px;margin-bottom:15px;}
+    .company-name {
+      font-size: 32px;
+      font-weight: 700;
+      margin-top: 10px;
+    }
 
-section{padding:80px 40px;}
-h2{text-align:center;margin-bottom:40px;color:gold;font-size:32px;}
+    .badge {
+      background: linear-gradient(45deg, gold, #ffcc00);
+      color: black;
+      padding: 8px 18px;
+      border-radius: 30px;
+      display: inline-block;
+      margin-top: 10px;
+      font-weight: 600;
+    }
 
-.services{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
-}
+    .hero {
+      height: 90vh;
+      background: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c') center/cover;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+    }
 
-.card{
-background:#222;
-padding:25px;
-border-radius:15px;
-text-align:center;
-}
+    .hero h1 {
+      font-size: 45px;
+      margin-bottom: 15px;
+    }
 
-.calculator-box{
-max-width:500px;
-margin:auto;
-background:#222;
-padding:30px;
-border-radius:15px;
-}
+    section {
+      padding: 80px 40px;
+    }
 
-input,textarea{
-width:100%;
-padding:12px;
-margin-bottom:15px;
-border:none;
-border-radius:8px;
-}
+    h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      color: gold;
+      font-size: 32px;
+    }
 
-button{
-background:gold;
-border:none;
-padding:12px 25px;
-border-radius:8px;
-font-weight:600;
-cursor:pointer;
-}
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
 
-.review img{
-width:80px;
-border-radius:50%;
-margin-bottom:10px;
-}
+    .card {
+      background: #222;
+      padding: 25px;
+      border-radius: 15px;
+      text-align: center;
+    }
 
-iframe{width:100%;height:400px;border:0;border-radius:15px;}
+    .review img {
+      width: 80px;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
 
-footer{background:black;text-align:center;padding:20px;}
+    iframe {
+      width: 100%;
+      height: 400px;
+      border: 0;
+      border-radius: 15px;
+    }
 
-.whatsapp{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25D366;
-color:white;
-padding:15px 20px;
-border-radius:50px;
-text-decoration:none;
-font-weight:600;
-}
+    footer {
+      background: black;
+      text-align: center;
+      padding: 20px;
+    }
 
-.call-btn{
-position:fixed;
-bottom:90px;
-right:20px;
-background:gold;
-color:black;
-padding:12px 18px;
-border-radius:50px;
-text-decoration:none;
-font-weight:600;
-}
-</style>
+    .whatsapp {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25D366;
+      color: white;
+      padding: 15px 20px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .call-btn {
+      position: fixed;
+      bottom: 90px;
+      right: 20px;
+      background: gold;
+      color: black;
+      padding: 12px 18px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    /* Dark Mode Styles */
+    body.dark-mode {
+      background-color: #111;
+      color: white;
+    }
+
+    body.dark-mode header {
+      background-color: #333;
+    }
+
+    body.dark-mode .card {
+      background-color: #333;
+    }
+
+    body.dark-mode footer {
+      background-color: #333;
+    }
+
+    body.dark-mode h2 {
+      color: gold;
+    }
+
+    /* Light Mode Styles */
+    body.light-mode {
+      background-color: white;
+      color: black;
+    }
+
+    body.light-mode header {
+      background-color: #f8f8f8;
+    }
+
+    body.light-mode .card {
+      background-color: #f1f1f1;
+    }
+
+    body.light-mode footer {
+      background-color: #f8f8f8;
+    }
+
+    body.light-mode h2 {
+      color: goldenrod;
+    }
+
+    .mode-toggle {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background-color: #444;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+  </style>
 </head>
 
-<body>
+<body class="dark-mode">
 
-<header>
-<div><strong>Chaudhary Tiles</strong></div>
-<nav>
-<a href="#about">About</a>
-<a href="#services">Services</a>
-<a href="#labour">Rates</a>
-<a href="#contact">Contact</a>
-</nav>
-</header>
+  <!-- Mode Toggle Button -->
+  <button class="mode-toggle" onclick="toggleMode()">Toggle Dark/Light Mode</button>
 
-<div class="logo-area">
-<div class="logo-area">
-    <img src="logo.png" class="main-logo">
-</div>
-<div class="company-name">Chaudhary Tiles & Stone</div>
-<div class="badge">🏆 21+ Years Experience Since 2005</div>
-</div>
+  <header>
+    <div><strong>Chaudhary Tiles</strong></div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#labour">Rates</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-<div class="hero">
-<h1>Professional Tile & Stone Installation</h1>
-<p>Serving Gurugram with Quality, Trust & Perfection</p>
-</div>
+  <div class="logo-area">
+    <img src="logo.png" class="main-logo" alt="Logo">
+    <div class="company-name">Chaudhary Tiles & Stone</div>
+    <div class="badge">🏆 21+ Years Experience Since 2005</div>
+  </div>
 
-<section id="services">
-<h2>Our Services</h2>
-<div class="services">
-<div class="card">Floor Tile Installation</div>
-<div class="card">Bathroom Renovation</div>
-<div class="card">Kitchen Tile Work</div>
-<div class="card">Marble & Granite Fixing</div>
-<div class="card">Stone Cladding</div>
-<div class="card">Commercial Tile Projects</div>
-</div>
-</section>
+  <div class="hero">
+    <h1>Professional Tile & Stone Installation</h1>
+    <p>Serving Gurugram with Quality, Trust & Perfection</p>
+  </div>
 
-<!-- LABOUR RATES SECTION -->
-<section id="labour">
-<h2>Our Labour Rates (Without Material)</h2>
-<div class="services">
-<div class="card"><h3>Tile Fitting</h3><p>₹45 per sq.ft</p></div>
-<div class="card"><h3>Kitchen Stone</h3><p>₹200 per sq.ft</p></div>
-<div class="card"><h3>Window Stone</h3><p>₹250 per sq.ft</p></div>
-<div class="card"><h3>Waterproofing</h3><p>₹80 per sq.ft</p></div>
-<div class="card"><h3>Epoxy Work</h3><p>₹20 per sq.ft</p></div>
-<div class="card"><h3>Bathroom Plumbing</h3><p>₹15,000 per bathroom</p></div>
-</div>
-</section>
+  <section id="services">
+    <h2>Our Services</h2>
+    <div class="services">
+      <div class="card">Floor Tile Installation</div>
+      <div class="card">Bathroom Renovation</div>
+      <div class="card">Kitchen Tile Work</div>
+      <div class="card">Marble & Granite Fixing</div>
+      <div class="card">Stone Cladding</div>
+      <div class="card">Commercial Tile Projects</div>
+    </div>
+  </section>
 
-<section>
-<h2>Tile Cost Calculator</h2>
-<div class="calculator-box">
-<input type="number" id="area" placeholder="Enter Area in sq.ft">
-<input type="number" id="rate" placeholder="Rate per sq.ft">
-<button onclick="calculate()">Calculate</button>
-<h3 id="result"></h3>
-</div>
-</section>
+  <section id="labour">
+    <h2>Our Labour Rates (Without Material)</h2>
+    <div class="services">
+      <div class="card">
+        <h3>Tile Fitting</h3>
+        <p>₹45 per sq.ft</p>
+      </div>
+      <div class="card">
+        <h3>Kitchen Stone</h3>
+        <p>₹200 per sq.ft</p>
+      </div>
+      <div class="card">
+        <h3>Window Stone</h3>
+        <p>₹250 per sq.ft</p>
+      </div>
+      <div class="card">
+        <h3>Waterproofing</h3>
+        <p>₹80 per sq.ft</p>
+      </div>
+      <div class="card">
+        <h3>Epoxy Work</h3>
+        <p>₹20 per sq.ft</p>
+      </div>
+      <div class="card">
+        <h3>Bathroom Plumbing</h3>
+        <p>₹15,000 per bathroom</p>
+      </div>
+    </div>
+  </section>
 
-<footer>
-© 2026 Chaudhary Tiles & Stone | All Rights Reserved
-</footer>
+  <footer>
+    © 2026 Chaudhary Tiles & Stone | All Rights Reserved
+  </footer>
 
-<a href="https://wa.me/917827692023" class="whatsapp" target="_blank">WhatsApp</a>
-<a href="tel:7827692023" class="call-btn">Call Now</a>
+  <a href="https://wa.me/917827692023" class="whatsapp" target="_blank">WhatsApp</a>
+  <a href="tel:7827692023" class="call-btn">Call Now</a>
 
-<script>
-function calculate(){
-var area=document.getElementById("area").value;
-var rate=document.getElementById("rate").value;
-document.getElementById("result").innerHTML="Total Cost: ₹ "+(area*rate);
-}
-</script>
-
+  <script>
+    // Dark/Light Mode Toggle Function
+    function toggleMode() {
+      const body = document.body;
+      if (body.classList.contains('dark-mode')) {
+        body.classList.remove('dark-mode');
+        body.classList.add('light-mode');
+      } else {
+        body.classList.remove('light-mode');
+        body.classList.add('dark-mode');
+      }
+    }
+  </script>
 </body>
+
 </html>
