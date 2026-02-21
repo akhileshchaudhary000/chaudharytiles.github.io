@@ -1,315 +1,95 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<img src="logo.png" alt="Logo" class="logo">
 <title>Chaudhary Tiles & Stone | Gurugram</title>
-
-<style>
-:root{
---bg:#f5f5f5;
---text:#222;
---card:#fff;
---primary:#00c3ff;
-}
-
-body.dark{
---bg:#121212;
---text:#fff;
---card:#1e1e1e;
-}
-
-body{
-margin:0;
-font-family:Arial, sans-serif;
-background:var(--bg);
-color:var(--text);
-transition:0.3s;
-}
-
-/* Header */
-header{
-background:#111;
-color:white;
-padding:20px;
-text-align:center;
-position:relative;
-}
-
-.toggle{
-position:absolute;
-right:20px;
-top:20px;
-background:var(--primary);
-border:none;
-padding:8px 15px;
-border-radius:20px;
-cursor:pointer;
-color:white;
-}
-
-/* Hero */
-.hero{
-background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
-url('https://images.unsplash.com/photo-1582582494700-f8ce0b6e1a5c?auto=format&fit=crop&w=1400&q=80');
-background-size:cover;
-background-position:center;
-height:300px;
-display:flex;
-align-items:center;
-justify-content:center;
-color:white;
-text-align:center;
-}
-
-/* Section */
-.section{
-padding:40px 20px;
-text-align:center;
-}
-
-/* Filter Buttons */
-.filter-btn{
-margin:5px;
-padding:8px 15px;
-border:none;
-cursor:pointer;
-background:var(--primary);
-color:white;
-border-radius:5px;
-}
-
-/* Table */
-table{
-width:95%;
-margin:auto;
-border-collapse:collapse;
-background:var(--card);
-box-shadow:0 5px 15px rgba(0,0,0,0.1);
-}
-
-th, td{
-padding:12px;
-border:1px solid #ddd;
-}
-
-th{
-background:var(--primary);
-color:white;
-}
-
-tr:hover{
-background:#f1f1f1;
-}
-
-/* Calculator */
-.calc-box{
-background:var(--card);
-padding:20px;
-margin:20px auto;
-max-width:400px;
-border-radius:10px;
-box-shadow:0 5px 15px rgba(0,0,0,0.1);
-}
-
-input, select{
-width:100%;
-padding:10px;
-margin:8px 0;
-border-radius:5px;
-border:1px solid #ccc;
-}
-
-/* Reviews */
-.review{
-background:var(--card);
-padding:15px;
-margin:10px auto;
-max-width:500px;
-border-radius:8px;
-box-shadow:0 3px 10px rgba(0,0,0,0.1);
-}
-
-/* Map */
-iframe{
-width:95%;
-height:300px;
-margin-top:20px;
-border-radius:10px;
-}
-
-/* WhatsApp */
-.whatsapp{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25D366;
-color:white;
-padding:15px;
-border-radius:50%;
-text-decoration:none;
-font-size:20px;
-box-shadow:0 5px 15px rgba(0,0,0,0.3);
-}
-
-/* Footer */
-footer{
-background:#111;
-color:white;
-text-align:center;
-padding:15px;
-margin-top:30px;
-}
-
-@media(max-width:768px){
-table{
-font-size:14px;
-}
-}
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <header>
-<h1>Chaudhary Tiles & Stone</h1>
-<p>Premium Tiles & Stone Services in Gurugram</p>
-<button class="toggle" onclick="toggleMode()">🌙 Mode</button>
+    <img src="logo.png" alt="Logo" class="logo">
+    <h1>Chaudhary Tiles & Stone</h1>
+    <p>Premium Tiles & Natural Stones in Gurugram</p>
 </header>
 
-<div class="hero">
-<h2>Professional Tile & Stone Labour Services</h2>
-</div>
+<section class="services">
+    <h2>Our Labour Rates (Without Material)</h2>
 
-<div class="section">
+    <div class="filter-buttons">
+        <button onclick="filterSelection('all')">All</button>
+        <button onclick="filterSelection('tiles')">Tiles</button>
+        <button onclick="filterSelection('stone')">Stone</button>
+        <button onclick="filterSelection('other')">Other</button>
+    </div>
 
-<h2>Price List (Labour Only)</h2>
+    <table>
+        <tr>
+            <th>Service</th>
+            <th>Category</th>
+            <th>Rate</th>
+        </tr>
 
-<button class="filter-btn" onclick="filter('all')">All</button>
-<button class="filter-btn" onclick="filter('tiles')">Tiles</button>
-<button class="filter-btn" onclick="filter('stone')">Stone</button>
-<button class="filter-btn" onclick="filter('service')">Services</button>
-<button class="filter-btn" onclick="filter('labour')">Labour</button>
+        <tr class="filterDiv tiles">
+            <td>Floor / Wall Tiles</td>
+            <td>Tiles</td>
+            <td>₹45 / sq ft</td>
+        </tr>
 
-<br><br>
+        <tr class="filterDiv stone">
+            <td>Kitchen Stone</td>
+            <td>Stone</td>
+            <td>₹200 / sq ft</td>
+        </tr>
 
-<table>
-<tr>
-<th>Service</th>
-<th>Category</th>
-<th>Price</th>
-</tr>
+        <tr class="filterDiv stone">
+            <td>Window Stone</td>
+            <td>Stone</td>
+            <td>₹250 / sq ft</td>
+        </tr>
 
-<tr class="tiles">
-<td>Tile Fitting</td>
-<td>Tiles</td>
-<td>₹45 / sq.ft</td>
-</tr>
+        <tr class="filterDiv other">
+            <td>Waterproofing</td>
+            <td>Other</td>
+            <td>₹80 / sq ft</td>
+        </tr>
 
-<tr class="stone">
-<td>Kitchen Stone Fitting</td>
-<td>Stone</td>
-<td>₹200 / sq.ft</td>
-</tr>
+        <tr class="filterDiv other">
+            <td>Epoxy</td>
+            <td>Other</td>
+            <td>₹20 / sq ft</td>
+        </tr>
 
-<tr class="stone">
-<td>Window Stone Fitting</td>
-<td>Stone</td>
-<td>₹250 / sq.ft</td>
-</tr>
+        <tr class="filterDiv other">
+            <td>Bathroom Plumbing (1 Bathroom)</td>
+            <td>Other</td>
+            <td>₹15,000</td>
+        </tr>
 
-<tr class="service">
-<td>Water Proofing</td>
-<td>Service</td>
-<td>₹80 / sq.ft</td>
-</tr>
+    </table>
+</section>
 
-<tr class="service">
-<td>Epoxy Filling</td>
-<td>Service</td>
-<td>₹20 / sq.ft</td>
-</tr>
-
-<tr class="labour">
-<td>Bathroom Plumbing (1 Bathroom)</td>
-<td>Labour</td>
-<td>₹15,000</td>
-</tr>
-
-</table>
-
-</div>
-
-<!-- Calculator -->
-<div class="section">
-<h2>Cost Calculator</h2>
-
-<div class="calc-box">
-<select id="service">
-<option value="45">Tile Fitting (₹45)</option>
-<option value="200">Kitchen Stone (₹200)</option>
-<option value="250">Window Stone (₹250)</option>
-<option value="80">Water Proofing (₹80)</option>
-<option value="20">Epoxy (₹20)</option>
-</select>
-
-<input type="number" id="area" placeholder="Enter Area (sq.ft)">
-<button onclick="calculate()">Calculate</button>
-
-<h3 id="result"></h3>
-</div>
-</div>
-
-<!-- Reviews -->
-<div class="section">
-<h2>Customer Reviews ⭐</h2>
-
-<div class="review">
-<p>"Best tile fitting service in Gurugram. Very professional work."</p>
-<b>- Rahul Sharma</b>
-</div>
-
-<div class="review">
-<p>"Affordable rates and quality finishing."</p>
-<b>- Amit Verma</b>
-</div>
-
-</div>
-
-<!-- Map -->
-<div class="section">
-<h2>Our Location</h2>
-<iframe src="https://www.google.com/maps?q=Gurugram,Haryana&output=embed"></iframe>
-</div>
+<section class="contact">
+    <h2>Contact Us</h2>
+    <p>📍 House No. 393, Gali No. 6, Sector 28, Gurugram, Haryana 122002</p>
+    <p>📞 Call Now: 9999999999</p>
+</section>
 
 <footer>
-© 2026 Chaudhary Tiles & Stone | All Rights Reserved
+    <p>© 2026 Chaudhary Tiles & Stone | All Rights Reserved</p>
 </footer>
 
-<a href="https://wa.me/917827692023" class="whatsapp" target="_blank">💬</a>
-
 <script>
-function filter(category){
-var rows=document.querySelectorAll("table tr");
-rows.forEach(function(row){
-if(row.classList.contains(category) || category==="all" || row.rowIndex===0){
-row.style.display="";
-}else{
-row.style.display="none";
-}
-});
-}
-
-function calculate(){
-var rate=document.getElementById("service").value;
-var area=document.getElementById("area").value;
-var total=rate*area;
-document.getElementById("result").innerText="Total Cost: ₹"+total;
-}
-
-function toggleMode(){
-document.body.classList.toggle("dark");
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("filterDiv");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = x[i].className.indexOf(c) > -1 ? "" : "none";
+  }
 }
 </script>
 
