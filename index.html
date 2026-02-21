@@ -318,7 +318,27 @@ background:#f4f4f4;
 <p>Serving Gurugram with Quality, Trust & Perfection</p>
 <a href="#contact" class="btn">Get Free Estimate</a>
 </section>
-
+<!-- ABOUT SECTION -->
+<section id="about">
+    <h2>About Us</h2>
+    <div class="about-container">
+        <div class="about-text">
+            <h3>Chaudhary Tiles & Stone</h3>
+            <p>
+                With 21+ years of experience, we provide professional tile and stone
+                installation services in Gurugram. We specialize in floor tiles,
+                bathroom renovation, kitchen stone fitting, marble & granite work,
+                waterproofing and complete commercial projects.
+            </p>
+            <p>
+                Our focus is quality finishing, timely completion, and 100% customer satisfaction.
+            </p>
+        </div>
+        <div class="about-image">
+            <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d" alt="Tile Work">
+        </div>
+    </div>
+</section>
 <section id="services">
 <h2>Our Services</h2>
 <div class="services">
@@ -342,6 +362,16 @@ background:#f4f4f4;
 <div class="card">Bathroom Plumbing – ₹15,000</div>
 </div>
 </section>
+  <!-- CALCULATOR SECTION -->
+<section id="calculator">
+    <h2>Tile Cost Calculator</h2>
+    <div class="calculator-box">
+        <input type="number" id="area" placeholder="Enter Area (sq.ft)">
+        <input type="number" id="rate" placeholder="Rate per sq.ft">
+        <button onclick="calculateCost()">Calculate</button>
+        <h3 id="totalResult"></h3>
+    </div>
+</section>
 
 <section id="gallery">
 <h2>Our Work</h2>
@@ -351,7 +381,15 @@ background:#f4f4f4;
 <img src="https://images.unsplash.com/photo-1600566752227-8f5a47c3b1c2">
 </div>
 </section>
-
+<!-- MAP SECTION -->
+<section id="map">
+    <h2>Our Location</h2>
+    <div class="map-box">
+        <iframe 
+        src="https://www.google.com/maps?q=Gurugram,Haryana&output=embed">
+        </iframe>
+    </div>
+</section>
 <section id="contact">
 <h2>Book Your Service</h2>
 <form>
@@ -375,6 +413,24 @@ function toggleMode(){
 document.body.classList.toggle("light-mode");
 }
 </script>
+<script>
+function toggleMode(){
+document.body.classList.toggle("light-mode");
+}
 
+function calculateCost(){
+let area = document.getElementById("area").value;
+let rate = document.getElementById("rate").value;
+
+if(area && rate){
+let total = area * rate;
+document.getElementById("totalResult").innerHTML = 
+"Total Cost: ₹ " + total.toLocaleString();
+} else {
+document.getElementById("totalResult").innerHTML = 
+"Please enter both values";
+}
+}
+</script>
 </body>
 </html>
