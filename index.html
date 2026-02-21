@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<link rel="stylesheet" href="style.css">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Chaudhary Tiles & Stone | Gurugram</title>
@@ -10,87 +9,46 @@
 
 <body>
 
+<button class="mode-toggle" onclick="toggleMode()">🌙 Dark Mode</button>
+
 <header>
     <img src="logo.png" alt="Logo" class="logo">
     <h1>Chaudhary Tiles & Stone</h1>
     <p>Premium Tiles & Natural Stones in Gurugram</p>
 </header>
 
-<section class="services">
-    <h2>Our Labour Rates (Without Material)</h2>
-
-    <div class="filter-buttons">
-        <button onclick="filterSelection('all')">All</button>
-        <button onclick="filterSelection('tiles')">Tiles</button>
-        <button onclick="filterSelection('stone')">Stone</button>
-        <button onclick="filterSelection('other')">Other</button>
-    </div>
-
-    <table>
-        <tr>
-            <th>Service</th>
-            <th>Category</th>
-            <th>Rate</th>
-        </tr>
-
-        <tr class="filterDiv tiles">
-            <td>Floor / Wall Tiles</td>
-            <td>Tiles</td>
-            <td>₹45 / sq ft</td>
-        </tr>
-
-        <tr class="filterDiv stone">
-            <td>Kitchen Stone</td>
-            <td>Stone</td>
-            <td>₹200 / sq ft</td>
-        </tr>
-
-        <tr class="filterDiv stone">
-            <td>Window Stone</td>
-            <td>Stone</td>
-            <td>₹250 / sq ft</td>
-        </tr>
-
-        <tr class="filterDiv other">
-            <td>Waterproofing</td>
-            <td>Other</td>
-            <td>₹80 / sq ft</td>
-        </tr>
-
-        <tr class="filterDiv other">
-            <td>Epoxy</td>
-            <td>Other</td>
-            <td>₹20 / sq ft</td>
-        </tr>
-
-        <tr class="filterDiv other">
-            <td>Bathroom Plumbing (1 Bathroom)</td>
-            <td>Other</td>
-            <td>₹15,000</td>
-        </tr>
-
-    </table>
+<section class="calculator">
+    <h2>Tile Area Calculator</h2>
+    <input type="number" id="length" placeholder="Length (ft)">
+    <input type="number" id="width" placeholder="Width (ft)">
+    <button onclick="calculateArea()">Calculate</button>
+    <p id="result"></p>
 </section>
 
-<section class="contact">
-    <h2>Contact Us</h2>
-    <p>📍 House No. 393, Gali No. 6, Sector 28, Gurugram, Haryana 122002</p>
-    <p>📞 Call Now: 7827692023</p>
+<section class="map">
+    <h2>Our Location</h2>
+    <iframe 
+        src="https://www.google.com/maps?q=Sector+28+Gurugram&output=embed"
+        width="90%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+    </iframe>
 </section>
+
+<a href="https://wa.me/919999999999" class="whatsapp" target="_blank">💬</a>
 
 <footer>
     <p>© 2026 Chaudhary Tiles & Stone | All Rights Reserved</p>
 </footer>
 
 <script>
-filterSelection("all")
-function filterSelection(c) {
-  var x, i;
-  x = document.getElementsByClassName("filterDiv");
-  if (c == "all") c = "";
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = x[i].className.indexOf(c) > -1 ? "" : "none";
-  }
+function toggleMode() {
+    document.body.classList.toggle("dark");
+}
+
+function calculateArea() {
+    let l = document.getElementById("length").value;
+    let w = document.getElementById("width").value;
+    let area = l * w;
+    document.getElementById("result").innerText = "Total Area: " + area + " sq ft";
 }
 </script>
 
