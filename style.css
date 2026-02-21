@@ -3,6 +3,12 @@ body {
     margin: 0;
     background: #f4f4f4;
     text-align: center;
+    transition: 0.3s;
+}
+
+.dark {
+    background: #111;
+    color: white;
 }
 
 header {
@@ -13,58 +19,37 @@ header {
 
 .logo {
     width: 220px;
-    height: auto;
-    display: block;
     margin: 0 auto 15px;
+    display: block;
 }
 
-h1 {
-    margin: 10px 0;
-}
-
-.services {
-    padding: 40px 20px;
-}
-
-.filter-buttons button {
-    padding: 10px 15px;
-    margin: 5px;
+.mode-toggle {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    padding: 8px 12px;
     border: none;
-    background: #111;
-    color: white;
     cursor: pointer;
-    border-radius: 5px;
 }
 
-.filter-buttons button:hover {
-    background: #444;
+.calculator input {
+    padding: 8px;
+    margin: 5px;
 }
 
-table {
-    width: 90%;
-    margin: 20px auto;
-    border-collapse: collapse;
-    background: white;
+.calculator button {
+    padding: 8px 12px;
+    cursor: pointer;
 }
 
-th, td {
-    padding: 12px;
-    border: 1px solid #ddd;
-}
-
-th {
-    background: #222;
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
     color: white;
-}
-
-.contact {
-    background: #222;
-    color: white;
-    padding: 30px 20px;
-}
-
-footer {
-    background: #000;
-    color: white;
-    padding: 15px;
+    font-size: 24px;
+    padding: 12px 15px;
+    border-radius: 50%;
+    text-decoration: none;
 }
