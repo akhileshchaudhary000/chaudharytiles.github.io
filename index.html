@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,46 +9,86 @@
 
 <body>
 
-<button class="mode-toggle" onclick="toggleMode()">🌙 Dark Mode</button>
+<button class="mode-toggle" onclick="toggleMode()">🌙</button>
 
 <header>
-    <img src="logo.png" alt="Logo" class="logo">
-    <h1>Chaudhary Tiles & Stone</h1>
-    <p>Premium Tiles & Natural Stones in Gurugram</p>
+<img src="logo.png" class="logo">
+<h1>Chaudhary Tiles & Stone</h1>
+<p>Premium Tile & Stone Installation Services | Gurugram</p>
 </header>
 
-<section class="calculator">
-    <h2>Tile Area Calculator</h2>
-    <input type="number" id="length" placeholder="Length (ft)">
-    <input type="number" id="width" placeholder="Width (ft)">
-    <button onclick="calculateArea()">Calculate</button>
-    <p id="result"></p>
+<!-- PRICE SECTION -->
+<section class="price-section">
+<h2>Our Labour Price List (Without Material)</h2>
+
+<table>
+<tr><th>Service</th><th>Rate</th></tr>
+<tr><td>Tile Installation</td><td>₹45 / sq ft</td></tr>
+<tr><td>Kitchen Stone</td><td>₹200 / sq ft</td></tr>
+<tr><td>Window Stone</td><td>₹250 / sq ft</td></tr>
+<tr><td>Waterproofing</td><td>₹80 / sq ft</td></tr>
+<tr><td>Epoxy Work</td><td>₹20 / sq ft</td></tr>
+<tr><td>Plumbing (1 Bathroom)</td><td>₹15,000</td></tr>
+</table>
 </section>
 
+<!-- GALLERY -->
+<section class="gallery">
+<h2>Our Work Gallery</h2>
+<div class="gallery-grid">
+<img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" />
+<img src="https://images.unsplash.com/photo-1599423300746-b62533397364" />
+<img src="https://images.unsplash.com/photo-1600607687126-8a5f41f1d70b" />
+</div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews">
+<h2>Customer Reviews</h2>
+<div class="review-box">
+<p>⭐⭐⭐⭐⭐</p>
+<p>"Very professional tile work. Highly recommended!"</p>
+</div>
+<div class="review-box">
+<p>⭐⭐⭐⭐⭐</p>
+<p>"Best labour rates and clean finishing."</p>
+</div>
+</section>
+
+<!-- BOOKING FORM -->
+<section class="booking">
+<h2>Book Service / Get Quote</h2>
+<input type="text" id="name" placeholder="Your Name">
+<input type="number" id="phone" placeholder="Your Phone">
+<textarea id="message" placeholder="Work Details"></textarea>
+<button onclick="sendWhatsApp()">Send on WhatsApp</button>
+</section>
+
+<!-- MAP -->
 <section class="map">
-    <h2>Our Location</h2>
-    <iframe 
-        src="https://www.google.com/maps?q=Sector+28+Gurugram&output=embed"
-        width="90%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
-    </iframe>
+<h2>Our Location</h2>
+<iframe src="https://www.google.com/maps?q=Sector+28+Gurugram&output=embed"
+width="90%" height="300" style="border:0;"></iframe>
 </section>
 
 <a href="https://wa.me/917827692023" class="whatsapp" target="_blank">💬</a>
 
 <footer>
-    <p>© 2026 Chaudhary Tiles & Stone | All Rights Reserved</p>
+<p>© 2026 Chaudhary Tiles & Stone | Gurugram</p>
 </footer>
 
 <script>
-function toggleMode() {
-    document.body.classList.toggle("dark");
+function toggleMode(){
+document.body.classList.toggle("dark");
 }
 
-function calculateArea() {
-    let l = document.getElementById("length").value;
-    let w = document.getElementById("width").value;
-    let area = l * w;
-    document.getElementById("result").innerText = "Total Area: " + area + " sq ft";
+function sendWhatsApp(){
+let name=document.getElementById("name").value;
+let phone=document.getElementById("phone").value;
+let message=document.getElementById("message").value;
+
+let url="https://wa.me/919876543210?text=Name: "+name+"%0APhone: "+phone+"%0ADetails: "+message;
+window.open(url,"_blank");
 }
 </script>
 
