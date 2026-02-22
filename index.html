@@ -27,6 +27,7 @@
       <a href="#gallery">Work</a>
       <a href="#calculator">Calculator</a>
       <a href="#reviews">Reviews</a>
+      <a href="#booking">Booking</a>
       <a href="#contact">Contact</a>
     </nav>
 
@@ -34,17 +35,19 @@
   </div>
 </header>
 
+<!-- HERO -->
 <section class="hero">
   <img src="logo.png" class="hero-logo">
   <h2>Professional Tile & Stone Installation</h2>
   <p>Serving Gurugram with Quality, Trust & Perfection</p>
-  <a href="#contact" class="gold-btn">Get Free Estimate</a>
+  <a href="#booking" class="gold-btn">Get Free Estimate</a>
 
   <div class="badge">
     🏆 Since 2005 | 21+ Years Experience | 500+ Projects Completed
   </div>
 </section>
 
+<!-- ABOUT -->
 <section id="about">
   <h2>About Us</h2>
   <p>
@@ -54,6 +57,7 @@
   </p>
 </section>
 
+<!-- SERVICES -->
 <section id="services">
   <h2>Our Rates</h2>
   <div class="pricing-container">
@@ -66,6 +70,7 @@
   </div>
 </section>
 
+<!-- GALLERY -->
 <section id="gallery">
   <h2>Our Work</h2>
   <div class="gallery">
@@ -77,6 +82,7 @@
   </div>
 </section>
 
+<!-- CALCULATOR -->
 <section id="calculator">
   <h2>Tile Area Calculator</h2>
   <div class="calc-box">
@@ -87,6 +93,7 @@
   </div>
 </section>
 
+<!-- REVIEWS -->
 <section id="reviews">
   <h2>Google Reviews ⭐⭐⭐⭐⭐</h2>
 
@@ -109,27 +116,23 @@
   </div>
 </section>
 
-  <!-- BOOKING SECTION -->
+<!-- BOOKING -->
 <section id="booking">
   <h2>Book Free Site Visit</h2>
 
   <div class="booking-form">
     <input type="text" id="name" placeholder="Full Name" required>
     <input type="tel" id="phone" placeholder="Mobile Number" required>
-
-    <!-- NEW DATE & TIME -->
     <input type="date" id="date" required>
     <input type="time" id="time" required>
-
     <textarea id="details" placeholder="Work Details"></textarea>
-
     <button onclick="sendWhatsApp()">Book Now</button>
   </div>
 </section>
 
+<!-- CONTACT -->
 <section id="contact">
   <h2>Our Location</h2>
-
   <iframe 
   src="https://www.google.com/maps?q=Sector+28+Gurugram&output=embed"
   width="100%" height="300" style="border:0;"></iframe>
@@ -149,27 +152,38 @@
 
 <script>
 function calculate(){
-let l=document.getElementById("length").value;
-let w=document.getElementById("width").value;
-let area=l*w;
-document.getElementById("result").innerText="Total Area: "+area+" sq.ft";
+  let l=document.getElementById("length").value;
+  let w=document.getElementById("width").value;
+  let area=l*w;
+  document.getElementById("result").innerText="Total Area: "+area+" sq.ft";
 }
 
 function toggleMode(){
-document.body.classList.toggle("dark-mode");
+  document.body.classList.toggle("dark-mode");
+}
+
+function sendWhatsApp(){
+  let name = document.getElementById("name").value;
+  let phone = document.getElementById("phone").value;
+  let date = document.getElementById("date").value;
+  let time = document.getElementById("time").value;
+  let details = document.getElementById("details").value;
+
+  if(name === "" || phone === "" || date === "" || time === ""){
+    alert("Please fill all required fields");
+    return;
+  }
+
+  let message = "New Site Visit Booking:%0A%0A" +
+                "Name: " + name + "%0A" +
+                "Phone: " + phone + "%0A" +
+                "Preferred Date: " + date + "%0A" +
+                "Preferred Time: " + time + "%0A" +
+                "Work Details: " + details;
+
+  window.open("https://wa.me/917827692023?text=" + message, "_blank");
 }
 </script>
-<footer>
-...
-</footer>
 
-<script>
-  function sendWhatsApp(){
-    ...
-  }
-</script>
-
-</body>
-</html>
 </body>
 </html>
