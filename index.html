@@ -109,6 +109,24 @@
   </div>
 </section>
 
+  <!-- BOOKING SECTION -->
+<section id="booking">
+  <h2>Book Free Site Visit</h2>
+
+  <div class="booking-form">
+    <input type="text" id="name" placeholder="Full Name" required>
+    <input type="tel" id="phone" placeholder="Mobile Number" required>
+
+    <!-- NEW DATE & TIME -->
+    <input type="date" id="date" required>
+    <input type="time" id="time" required>
+
+    <textarea id="details" placeholder="Work Details"></textarea>
+
+    <button onclick="sendWhatsApp()">Book Now</button>
+  </div>
+</section>
+
 <section id="contact">
   <h2>Our Location</h2>
 
@@ -141,6 +159,17 @@ function toggleMode(){
 document.body.classList.toggle("dark-mode");
 }
 </script>
+<footer>
+...
+</footer>
 
+<script>
+  function sendWhatsApp(){
+    ...
+  }
+</script>
+
+</body>
+</html>
 </body>
 </html>
