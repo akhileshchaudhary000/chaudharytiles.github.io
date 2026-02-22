@@ -265,3 +265,7 @@ width:95%;
 }
 
 }
+.booking-form input[type="date"],
+.booking-form input[type="time"]{
+cursor:pointer;
+}
