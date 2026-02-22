@@ -81,8 +81,10 @@ padding:120px 20px;
 }
 
 .hero-logo{
-width:120px;
-margin-bottom:20px;
+width:220px;
+max-width:80%;
+margin-bottom:25px;
+}
 }
 
 .gold-btn{
