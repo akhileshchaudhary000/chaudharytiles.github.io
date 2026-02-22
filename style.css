@@ -1,312 +1,322 @@
+/* ================= GLOBAL STYLES ================= */
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-scroll-behavior:smooth;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+    scroll-behavior:smooth;
 }
 
 body{
-background:#fff;
-color:#000;
-transition:0.3s;
-line-height:1.6;
+    background:#fff;
+    color:#111;
+    transition:0.3s;
+    line-height:1.6;
 }
 
+a{
+    text-decoration:none;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-weight:600;
+}
+
+button{
+    cursor:pointer;
+    font-family:'Poppins',sans-serif;
+}
+
+/* ================= DARK MODE ================= */
 .dark-mode{
-background:#111;
-color:#fff;
+    background:#111;
+    color:#fff;
 }
 
-/* ================= HEADER ================= */
-
-header{
-background:#000;
-color:#fff;
-padding:12px 0;
-position:sticky;
-top:0;
-z-index:1000;
+/* ================= NAVBAR / HEADER ================= */
+header, .navbar{
+    background:#111;
+    color:#fff;
+    padding:15px 50px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:fixed;
+    top:0;
+    width:100%;
+    z-index:1000;
 }
 
-.header-container{
-display:flex;
-align-items:center;
-justify-content:space-between;
-width:95%;
-margin:auto;
-flex-wrap:wrap;
-}
-
-.logo-box{
-display:flex;
-align-items:center;
-gap:10px;
-}
-
-.header-logo{
-height:55px;
+header .logo-text, .navbar .logo-text{
+    font-size:22px;
+    font-weight:bold;
+    color:gold;
 }
 
 nav a{
-color:white;
-margin:0 10px;
-text-decoration:none;
-font-size:14px;
-transition:0.3s;
+    color:white;
+    margin-left:20px;
+    font-size:16px;
+    transition:0.3s;
 }
 
 nav a:hover{
-color:gold;
+    color:gold;
 }
 
-.toggle-btn{
-background:gold;
-border:none;
-padding:6px 10px;
-cursor:pointer;
-border-radius:5px;
+/* ================= HERO SECTION ================= */
+.hero{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    background:#000 url('hero-bg.jpg') center/cover no-repeat;
+    text-align:center;
+    padding:0 20px;
 }
 
-/* ================= FULL LOGO HERO ================= */
-
-.hero {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: black;
-    position: relative;
-}
-
-.hero-logo {
-    width: 500px;
-    max-width: 90%;
-    position: relative;
-    z-index: 1;
-}
-
-.hero h2{
-font-size:34px;
-margin-bottom:10px;
-position:relative;
-z-index:2;
+.hero h1, .hero h2{
+    font-size:48px;
+    color:gold;
+    margin-bottom:20px;
 }
 
 .hero p{
-font-size:18px;
-margin-bottom:20px;
-position:relative;
-z-index:2;
+    font-size:20px;
+    color:white;
+    margin-bottom:30px;
+    max-width:700px;
 }
 
-/* Button */
-
 .gold-btn{
-background:gold;
-color:black;
-padding:14px 30px;
-border-radius:40px;
-font-weight:bold;
-display:inline-block;
-margin-top:15px;
-transition:0.3s;
-position:relative;
-z-index:2;
-box-shadow:0 0 15px rgba(255,215,0,0.6);
-text-decoration:none;
+    background:gold;
+    color:black;
+    padding:14px 30px;
+    border-radius:40px;
+    font-weight:bold;
+    display:inline-block;
+    transition:0.3s;
+    box-shadow:0 0 15px rgba(255,215,0,0.6);
 }
 
 .gold-btn:hover{
-transform:scale(1.05);
-box-shadow:0 0 25px rgba(255,215,0,0.9);
+    transform:scale(1.05);
+    box-shadow:0 0 25px rgba(255,215,0,0.9);
 }
 
-/* Badge */
-
-.badge{
-margin-top:25px;
-background:linear-gradient(45deg,gold,#ffcc00);
-color:black;
-padding:10px 25px;
-display:inline-block;
-border-radius:30px;
-font-weight:bold;
-position:relative;
-z-index:2;
-box-shadow:0 0 15px rgba(255,215,0,0.6);
+/* ================= SERVICES SECTION ================= */
+.services{
+    padding:100px 20px;
+    text-align:center;
+    background:#f5f5f5;
 }
 
-/* ================= SECTIONS ================= */
-
-section{
-padding:70px 20px;
-text-align:center;
+.services h2{
+    font-size:36px;
+    margin-bottom:50px;
+    color:#111;
 }
 
-/* ================= PRICING ================= */
-
-.pricing-container{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
-width:90%;
-margin:auto;
+.service-box{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
 }
 
-.price-card{
-background:#f4f4f4;
-padding:25px;
-border-radius:10px;
-transition:0.3s;
-box-shadow:0 5px 15px rgba(0,0,0,0.05);
+.service-box div{
+    background:white;
+    padding:30px;
+    width:250px;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    transition:0.3s;
 }
 
-.price-card:hover{
-transform:translateY(-8px);
+.service-box div:hover{
+    transform:translateY(-10px);
 }
 
-.highlight{
-border:3px solid gold;
+/* ================= CTA BUTTON ================= */
+.cta-btn{
+    display:inline-block;
+    margin:50px 0;
+    padding:14px 35px;
+    background:gold;
+    color:black;
+    font-weight:bold;
+    border-radius:30px;
+    transition:0.3s;
 }
 
-.price{
-color:goldenrod;
-font-weight:bold;
-font-size:20px;
-margin-top:10px;
+.cta-btn:hover{
+    transform:scale(1.05);
+    box-shadow:0 0 20px rgba(255,215,0,0.7);
 }
 
 /* ================= GALLERY ================= */
-
 .gallery{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
-width:90%;
-margin:auto;
+    padding:100px 20px;
+    text-align:center;
+    background:#fff;
 }
 
-.gallery img{
-width:100%;
-height:250px;
-object-fit:cover;
-border-radius:12px;
-box-shadow:0 8px 20px rgba(0,0,0,0.1);
-transition:0.4s;
+.gallery h2{
+    font-size:36px;
+    margin-bottom:50px;
+    color:#111;
 }
 
-.gallery img:hover{
-transform:scale(1.05);
+.gallery-grid{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
 }
 
-/* ================= CALCULATOR ================= */
-
-.calc-box input{
-padding:10px;
-margin:5px;
-width:150px;
-border:1px solid #ccc;
-border-radius:5px;
+.gallery-grid img{
+    width:250px;
+    height:200px;
+    object-fit:cover;
+    border-radius:12px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.1);
+    transition:0.4s;
 }
 
-.calc-box button{
-padding:8px 15px;
-background:gold;
-border:none;
-cursor:pointer;
-border-radius:5px;
+.gallery-grid img:hover{
+    transform:scale(1.05);
 }
 
-/* ================= REVIEWS ================= */
-
-.review-card{
-background:#f4f4f4;
-padding:20px;
-margin:15px auto;
-width:80%;
-border-radius:10px;
-box-shadow:0 5px 15px rgba(0,0,0,0.05);
+/* ================= CONTACT SECTION ================= */
+.contact{
+    padding:100px 20px;
+    text-align:center;
+    background:#f5f5f5;
 }
 
-/* ================= CONTACT ================= */
+.contact h2{
+    font-size:36px;
+    margin-bottom:20px;
+    color:#111;
+}
 
-.contact-info{
-margin-top:20px;
-font-weight:bold;
+.contact p{
+    margin:5px 0;
+    font-weight:bold;
+}
+
+.contact form{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+    max-width:450px;
+    margin:30px auto 0;
+}
+
+.contact input, .contact textarea{
+    padding:12px;
+    border-radius:8px;
+    border:1px solid #ccc;
+    width:100%;
+}
+
+.contact button{
+    padding:12px;
+    background:gold;
+    border:none;
+    border-radius:30px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.contact button:hover{
+    transform:scale(1.05);
+    box-shadow:0 0 15px rgba(255,215,0,0.7);
 }
 
 /* ================= FOOTER ================= */
-
 footer{
-background:#000;
-color:white;
-padding:20px;
-text-align:center;
+    background:#111;
+    color:white;
+    padding:25px 20px;
+    text-align:center;
+}
+
+footer a{
+    color:gold;
+    margin:0 10px;
+    font-size:18px;
+}
+
+footer a:hover{
+    color:white;
 }
 
 /* ================= FLOATING BUTTONS ================= */
-
 .whatsapp{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25D366;
-color:white;
-padding:15px;
-border-radius:50%;
-text-decoration:none;
-font-size:22px;
-box-shadow:0 5px 15px rgba(0,0,0,0.2);
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#25D366;
+    color:white;
+    padding:15px;
+    border-radius:50%;
+    font-size:22px;
+    text-align:center;
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+    z-index:1000;
 }
 
 .sticky-call{
-position:fixed;
-bottom:80px;
-right:20px;
-background:red;
-color:white;
-padding:12px 20px;
-border-radius:30px;
-text-decoration:none;
-font-weight:bold;
-box-shadow:0 5px 15px rgba(0,0,0,0.2);
+    position:fixed;
+    bottom:90px;
+    right:20px;
+    background:red;
+    color:white;
+    padding:12px 20px;
+    border-radius:30px;
+    font-weight:bold;
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
 }
 
-/* ================= MOBILE ================= */
-
+/* ================= MOBILE RESPONSIVE ================= */
 @media(max-width:768px){
+    header, .navbar{
+        flex-direction:column;
+        padding:15px 20px;
+    }
 
-.header-container{
-flex-direction:column;
-gap:10px;
-}
+    nav{
+        margin-top:10px;
+        display:flex;
+        flex-wrap:wrap;
+        justify-content:center;
+    }
 
-nav{
-margin-top:10px;
-}
+    .hero h1, .hero h2{
+        font-size:32px;
+    }
 
-.review-card{
-width:95%;
-}
+    .hero p{
+        font-size:16px;
+    }
 
-.hero{
-padding:140px 20px 100px;
-}
+    .service-box{
+        flex-direction:column;
+        align-items:center;
+    }
 
-.hero-logo{
-width:170px;
-}
+    .gallery-grid{
+        flex-direction:column;
+        align-items:center;
+    }
 
-.hero h2{
-font-size:24px;
-}
+    .contact form{
+        width:95%;
+    }
 
-}
-
-/* Date & Time Cursor */
-
-.booking-form input[type="date"],
-.booking-form input[type="time"]{
-cursor:pointer;
+    .cta-btn{
+        padding:12px 25px;
+    }
 }
