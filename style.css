@@ -324,3 +324,44 @@ footer{
   color: gold;
   margin-bottom: 10px;
 }
+.calculator-section {
+  padding: 60px 20px;
+  background: #000;
+  color: white;
+  text-align: center;
+}
+
+.calc-box {
+  max-width: 400px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.calc-box select,
+.calc-box input {
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  font-size: 14px;
+}
+
+.calc-box button {
+  padding: 12px;
+  background: gold;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.calc-box button:hover {
+  background: orange;
+}
+
+.result {
+  margin-top: 20px;
+  font-size: 16px;
+  color: gold;
+}
