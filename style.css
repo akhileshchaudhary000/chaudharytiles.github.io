@@ -411,3 +411,48 @@ footer{
   margin: 8px 0;
   font-size: 16px;
 }
+/* ===== BEFORE AFTER SECTION ===== */
+
+#before-after {
+  padding: 80px 10%;
+  background: #ffffff;
+  text-align: center;
+}
+
+.ba-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.ba-card {
+  background: #f4f4f4;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.ba-card h3 {
+  margin-bottom: 20px;
+  color: #007bff;
+}
+
+.ba-images {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.ba-images div {
+  width: 48%;
+}
+
+.ba-images img {
+  width: 100%;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.ba-images img:hover {
+  transform: scale(1.05);
+}
