@@ -323,5 +323,50 @@ window.open("https://wa.me/917827692023?text="+whatsappMessage,"_blank");
 
 </script>
 
+ <script>
+function toggleInputs(){
+  let service = document.getElementById("service").value;
+
+  if(service == "15000"){
+    document.getElementById("length").style.display = "none";
+    document.getElementById("width").style.display = "none";
+  } else {
+    document.getElementById("length").style.display = "block";
+    document.getElementById("width").style.display = "block";
+  }
+}
+
+function calculateCost(){
+
+  let serviceRate = parseFloat(document.getElementById("service").value);
+  let length = parseFloat(document.getElementById("length").value);
+  let width = parseFloat(document.getElementById("width").value);
+
+  if(!serviceRate){
+    alert("Please select service");
+    return;
+  }
+
+  // Bathroom Plumbing fixed cost
+  if(serviceRate == 15000){
+    document.getElementById("result").innerHTML =
+      "<strong>Total Cost: ₹15,000</strong>";
+    return;
+  }
+
+  if(!length || !width){
+    alert("Please enter length and width");
+    return;
+  }
+
+  let area = length * width;
+  let total = area * serviceRate;
+
+  document.getElementById("result").innerHTML =
+    "Total Area: " + area + " sq.ft <br>" +
+    "Rate: ₹" + serviceRate + " / sq.ft <br><br>" +
+    "<strong>Total Estimated Cost: ₹" + total.toFixed(2) + "</strong>";
+}
+</script>
 </body>
 </html>
