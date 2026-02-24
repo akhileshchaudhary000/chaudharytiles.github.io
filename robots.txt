@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://akhileshchaudhary000.github.io/chaudhary-tiles-website/sitemap.xml
