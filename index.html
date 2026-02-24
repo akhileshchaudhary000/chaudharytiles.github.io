@@ -406,5 +406,39 @@ function calculateCost(){
     "<strong>Total Estimated Cost: ₹" + total.toFixed(2) + "</strong>";
 }
 </script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+<script>
+emailjs.init("fuOSxRj64wAVOzg-Y");
+
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  let formData = {
+    name: document.getElementById("name").value,
+    phone: document.getElementById("phone").value,
+    service: document.getElementById("service").value,
+    address: document.getElementById("address").value,
+  };
+
+  // 1️⃣ Customer Email (Corrected)
+  emailjs.send("service_evwf6pl", "template_lh2esuc", formData)
+  .then(function(response) {
+
+      // 2️⃣ Admin Email (Corrected)
+      emailjs.send("service_evwf6pl", "template_4aar9cc", formData);
+
+      alert("✅ Booking Submitted Successfully!");
+      document.getElementById("contactForm").reset();
+
+  }, function(error) {
+
+      alert("❌ Failed to send booking.");
+      console.log(error);
+
+  });
+
+});
+</script>
 </body>
 </html>
