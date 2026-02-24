@@ -415,11 +415,13 @@ document.getElementById("contactForm").addEventListener("submit", function(e) {
   e.preventDefault();
 
   let formData = {
-    name: document.getElementById("name").value,
-    phone: document.getElementById("phone").value,
-    service: document.getElementById("service").value,
-    address: document.getElementById("address").value,
-  };
+  let formData = {
+  name: document.getElementById("name").value,
+  phone: document.getElementById("phone").value,
+  service: document.getElementById("service").value,
+  address: document.getElementById("address").value,
+  time: new Date().toLocaleString()
+};
 
   // 1️⃣ Customer Email (Corrected)
   emailjs.send("service_evwf6pl", "template_lh2esuc", formData)
